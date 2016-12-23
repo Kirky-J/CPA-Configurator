@@ -259,7 +259,7 @@ def build_enable_pass(password):
 # Program starts here!
 
 print("\nWelcome to the Cisco IOS CPA Configuration Tool. ")
-print("This tool can be used to generate a basic IPsec VPN configuration for Cisco IOS devices to meet the CESG Foundation or End-State cryptographic profiles.\n")
+print("This tool can be used to generate a basic IPsec VPN configuration for Cisco IOS devices to meet the NCSC Foundation or End-State cryptographic profiles.\n")
 
 if len(sys.argv) == 2:
     # Load the certificate (If supplied)
