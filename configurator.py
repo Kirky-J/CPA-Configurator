@@ -360,13 +360,13 @@ while True:
 while True:
     tunnel_source = input("Please enter the tunnel source interface. Example: GigabitEthernet 0/0 or fa0/2: ")
     tunnel_src_number, good = check_interface_num(tunnel_source)
-    if "gi" in tunnel_source and good:
+    if "gi" in tunnel_source.lower() and good:
         tunnel_source_int = "GigabitEthernet"
         break
-    elif "fa" in tunnel_source and good:
+    elif "fa" in tunnel_source.lower() and good:
         tunnel_source_int = "FastEthernet"
         break
-    elif "lo" in tunnel_source and good:
+    elif "lo" in tunnel_source.lower() and good:
         tunnel_source_int = "Loopback"
     else:
         print("Unknown interface type or designation, please try again. Supported interface types are Loopback, FastEthernet or GigabitEthernet")
@@ -415,7 +415,7 @@ if cert_supplied:
 while True:
 
     save_config = input("Would you like to save the configuration to file? (Y)es or (N)o: ")
-    if save_config == "y":
+    if save_config.lower() == "y":
         #Ask for the file name and then write the file
         config_filename = input("Please enter the filename:")
         with open(config_filename, 'w') as f:
